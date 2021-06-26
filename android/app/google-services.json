@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "38665760501",
+    "project_id": "parkor-f6754",
+    "storage_bucket": "parkor-f6754.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:38665760501:android:7c744f3f4208a47d1b9fbc",
+        "android_client_info": {
+          "package_name": "com.example.parkor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "38665760501-nm4jgmo3iph90s41frcukoaoikrremk6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGqMP4BUyAjwcMFXY6WfotvaZgesDL29w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "38665760501-nm4jgmo3iph90s41frcukoaoikrremk6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
