@@ -5,6 +5,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:form_field_validator/form_field_validator.dart';
 import 'package:parkor/models/profile.dart';
 import 'package:parkor/screens/home.dart';
+import 'package:parkor/screens/main_screens.dart';
 import 'package:parkor/screens/welcome.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -114,7 +115,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                       Navigator.pushReplacement(
                                         context,
                                         MaterialPageRoute(builder: (context) {
-                                          return WelcomeScreen();
+                                          return MainScreen();
                                         }),
                                       );
                                     });

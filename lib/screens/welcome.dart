@@ -1,6 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:parkor/screens/home.dart';
+import 'package:parkor/screens/user.dart';
 
 class WelcomeScreen extends StatelessWidget {
   final auth = FirebaseAuth.instance;
@@ -9,33 +11,24 @@ class WelcomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: ElevatedButton(
-          onPressed: () {
-            auth.signOut().then((value) {
-              Navigator.pushReplacement(
-                context,
-                MaterialPageRoute(builder: (context) {
-                  return HomeScreen();
-                }),
-              );
-            });
-          },
-          child: Text("Log out"),
-        ),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: Center(
-          child: Column(
-            children: [
-              Text(
-                auth.currentUser!.email!,
-                style: TextStyle(fontSize: 24),
-              ),
-            ],
+        title: Text("Welcome"),
+        actions: [
+          ElevatedButton(
+            onPressed: () {
+              auth.signOut().then((value) {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) {
+                    return HomeScreen();
+                  }),
+                );
+              });
+            },
+            child: Text("Log out"),
           ),
-        ),
+        ],
       ),
+      body: Container(),
     );
   }
 }
