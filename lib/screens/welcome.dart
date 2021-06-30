@@ -14,6 +14,11 @@ class WelcomeScreen extends StatelessWidget {
         title: Text("Welcome"),
         actions: [
           ElevatedButton(
+            style: ElevatedButton.styleFrom(
+                primary: Colors.green,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.zero,
+                )),
             onPressed: () {
               auth.signOut().then((value) {
                 Navigator.pushReplacement(
