@@ -1,6 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:parkor/screens/BlogComponent/BlogCard.dart';
+import 'package:parkor/screens/BlogComponent/Blogs.dart';
 import 'package:parkor/screens/home.dart';
 import 'package:parkor/screens/user.dart';
 
@@ -33,7 +35,13 @@ class WelcomeScreen extends StatelessWidget {
           ),
         ],
       ),
-      body: Container(),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            BlogCard(),
+          ],
+        ),
+      ),
     );
   }
 }
