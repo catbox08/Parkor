@@ -1,6 +1,7 @@
 import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:parkor/screens/user.dart';
+import 'package:parkor/screens/user.dart';
 import 'package:parkor/screens/welcome.dart';
 
 class MainScreen extends StatefulWidget {
@@ -14,7 +15,7 @@ class _MainScreenState extends State<MainScreen> {
   int pageIndex = 0;
   List<Widget> pageList = <Widget>[
     WelcomeScreen(),
-    UserScreen(),
+    ProfilePage(),
   ];
   @override
   Widget build(BuildContext context) {
