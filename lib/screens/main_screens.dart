@@ -1,7 +1,7 @@
 import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:parkor/screens/login.dart';
-import 'package:parkor/screens/test.dart';
+
 import 'package:parkor/screens/user.dart';
 import 'package:parkor/screens/welcome.dart';
 
@@ -15,7 +15,6 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   int pageIndex = 1;
   List<Widget> pageList = <Widget>[
-    UserScreen2(),
     WelcomeScreen(),
     UserScreen(),
   ];
@@ -41,11 +40,6 @@ class _MainScreenState extends State<MainScreen> {
         },
         type: BottomNavigationBarType.fixed,
         items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.chat),
-            label: 'Chat',
-            backgroundColor: Colors.blue,
-          ),
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
