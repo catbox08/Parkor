@@ -1,0 +1,420 @@
+define(['dart_sdk', 'packages/flutter/src/foundation/debug.dart', 'packages/flutter/src/animation/animation_controller.dart', 'packages/flutter/src/widgets/widget_span.dart', 'packages/flutter/src/painting/alignment.dart', 'packages/flutter/src/animation/listener_helpers.dart'], (function load__packages__animations__src__page_transition_switcher_dart(dart_sdk, packages__flutter__src__foundation__debug$46dart, packages__flutter__src__animation__animation_controller$46dart, packages__flutter__src__widgets__widget_span$46dart, packages__flutter__src__painting__alignment$46dart, packages__flutter__src__animation__listener_helpers$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const _interceptors = dart_sdk._interceptors;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const diagnostics = packages__flutter__src__foundation__debug$46dart.src__foundation__diagnostics;
+  const animation_controller = packages__flutter__src__animation__animation_controller$46dart.src__animation__animation_controller;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const basic = packages__flutter__src__widgets__widget_span$46dart.src__widgets__basic;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const ticker_provider = packages__flutter__src__widgets__widget_span$46dart.src__widgets__ticker_provider;
+  const alignment = packages__flutter__src__painting__alignment$46dart.src__painting__alignment;
+  const animation = packages__flutter__src__animation__listener_helpers$46dart.src__animation__animation;
+  var page_transition_switcher = Object.create(dart.library);
+  var $_equals = dartx._equals;
+  var $forEach = dartx.forEach;
+  var $isEmpty = dartx.isEmpty;
+  var $isNotEmpty = dartx.isNotEmpty;
+  var $length = dartx.length;
+  var $insert = dartx.insert;
+  var $add = dartx.add;
+  var $contains = dartx.contains;
+  var $remove = dartx.remove;
+  var $map = dartx.map;
+  var $toList = dartx.toList;
+  dart._checkModuleNullSafetyMode(true);
+  var T = {
+    ListOfWidget: () => (T.ListOfWidget = dart.constFn(core.List$(framework.Widget)))(),
+    ListOfWidgetToWidget: () => (T.ListOfWidgetToWidget = dart.constFn(dart.fnType(framework.Widget, [T.ListOfWidget()])))(),
+    JSArrayOf_ChildEntry: () => (T.JSArrayOf_ChildEntry = dart.constFn(_interceptors.JSArray$(page_transition_switcher._ChildEntry)))(),
+    VoidTovoid: () => (T.VoidTovoid = dart.constFn(dart.fnType(dart.void, [])))(),
+    AnimationStatusTovoid: () => (T.AnimationStatusTovoid = dart.constFn(dart.fnType(dart.void, [animation.AnimationStatus])))(),
+    _ChildEntryToWidget: () => (T._ChildEntryToWidget = dart.constFn(dart.fnType(framework.Widget, [page_transition_switcher._ChildEntry])))()
+  };
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: core.Duration.prototype,
+        [Duration__duration]: 300000
+      });
+    },
+    get C1() {
+      return C[1] = dart.fn(page_transition_switcher.PageTransitionSwitcher.defaultLayoutBuilder, T.ListOfWidgetToWidget());
+    },
+    get C4() {
+      return C[4] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 7,
+        [_Location_line]: 269,
+        [_Location_file]: null
+      });
+    },
+    get C5() {
+      return C[5] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "alignment",
+        [_Location_column]: 7,
+        [_Location_line]: 270,
+        [_Location_file]: null
+      });
+    },
+    get C3() {
+      return C[3] = dart.constList([C[4] || CT.C4, C[5] || CT.C5], widget_inspector._Location);
+    },
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[3] || CT.C3,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 268,
+        [_Location_file]: "file:///E:/downloads/flutter_windows_2.2.2-stable/flutter/.pub-cache/hosted/pub.dartlang.org/animations-2.0.0/lib/src/page_transition_switcher.dart"
+      });
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 9,
+        [_Location_line]: 383,
+        [_Location_file]: null
+      });
+    },
+    get C9() {
+      return C[9] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "childIndex",
+        [_Location_column]: 9,
+        [_Location_line]: 384,
+        [_Location_file]: null
+      });
+    },
+    get C7() {
+      return C[7] = dart.constList([C[8] || CT.C8, C[9] || CT.C9], widget_inspector._Location);
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[7] || CT.C7,
+        [_Location_name]: null,
+        [_Location_column]: 32,
+        [_Location_line]: 382,
+        [_Location_file]: "file:///E:/downloads/flutter_windows_2.2.2-stable/flutter/.pub-cache/hosted/pub.dartlang.org/animations-2.0.0/lib/src/page_transition_switcher.dart"
+      });
+    },
+    get C12() {
+      return C[12] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "key",
+        [_Location_column]: 7,
+        [_Location_line]: 419,
+        [_Location_file]: null
+      });
+    },
+    get C13() {
+      return C[13] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 7,
+        [_Location_line]: 420,
+        [_Location_file]: null
+      });
+    },
+    get C11() {
+      return C[11] = dart.constList([C[12] || CT.C12, C[13] || CT.C13], widget_inspector._Location);
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[11] || CT.C11,
+        [_Location_name]: null,
+        [_Location_column]: 24,
+        [_Location_line]: 418,
+        [_Location_file]: "file:///E:/downloads/flutter_windows_2.2.2-stable/flutter/.pub-cache/hosted/pub.dartlang.org/animations-2.0.0/lib/src/page_transition_switcher.dart"
+      });
+    }
+  }, false);
+  var C = Array(14).fill(void 0);
+  var I = [
+    "package:animations/src/page_transition_switcher.dart",
+    "file:///E:/downloads/flutter_windows_2.2.2-stable/flutter/.pub-cache/hosted/pub.dartlang.org/animations-2.0.0/lib/src/page_transition_switcher.dart"
+  ];
+  page_transition_switcher._ChildEntry = class _ChildEntry extends core.Object {
+    dispose() {
+      this.primaryController.dispose();
+      this.secondaryController.dispose();
+    }
+    toString() {
+      return "PageTransitionSwitcherEntry#" + diagnostics.shortHash(this) + "(" + dart.str(this.widgetChild) + ")";
+    }
+  };
+  (page_transition_switcher._ChildEntry.new = function(opts) {
+    let primaryController = opts && 'primaryController' in opts ? opts.primaryController : null;
+    let secondaryController = opts && 'secondaryController' in opts ? opts.secondaryController : null;
+    let transition = opts && 'transition' in opts ? opts.transition : null;
+    let widgetChild = opts && 'widgetChild' in opts ? opts.widgetChild : null;
+    this.primaryController = primaryController;
+    this.secondaryController = secondaryController;
+    this.transition = transition;
+    this.widgetChild = widgetChild;
+    ;
+  }).prototype = page_transition_switcher._ChildEntry.prototype;
+  dart.addTypeTests(page_transition_switcher._ChildEntry);
+  dart.addTypeCaches(page_transition_switcher._ChildEntry);
+  dart.setMethodSignature(page_transition_switcher._ChildEntry, () => ({
+    __proto__: dart.getMethods(page_transition_switcher._ChildEntry.__proto__),
+    dispose: dart.fnType(dart.void, [])
+  }));
+  dart.setLibraryUri(page_transition_switcher._ChildEntry, I[0]);
+  dart.setFieldSignature(page_transition_switcher._ChildEntry, () => ({
+    __proto__: dart.getFields(page_transition_switcher._ChildEntry.__proto__),
+    primaryController: dart.finalFieldType(animation_controller.AnimationController),
+    secondaryController: dart.finalFieldType(animation_controller.AnimationController),
+    transition: dart.fieldType(framework.Widget),
+    widgetChild: dart.fieldType(framework.Widget)
+  }));
+  dart.defineExtensionMethods(page_transition_switcher._ChildEntry, ['toString']);
+  var child$ = dart.privateName(page_transition_switcher, "PageTransitionSwitcher.child");
+  var duration$ = dart.privateName(page_transition_switcher, "PageTransitionSwitcher.duration");
+  var reverse$ = dart.privateName(page_transition_switcher, "PageTransitionSwitcher.reverse");
+  var transitionBuilder$ = dart.privateName(page_transition_switcher, "PageTransitionSwitcher.transitionBuilder");
+  var layoutBuilder$ = dart.privateName(page_transition_switcher, "PageTransitionSwitcher.layoutBuilder");
+  var Duration__duration = dart.privateName(core, "Duration._duration");
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  page_transition_switcher.PageTransitionSwitcher = class PageTransitionSwitcher extends framework.StatefulWidget {
+    get child() {
+      return this[child$];
+    }
+    set child(value) {
+      super.child = value;
+    }
+    get duration() {
+      return this[duration$];
+    }
+    set duration(value) {
+      super.duration = value;
+    }
+    get reverse() {
+      return this[reverse$];
+    }
+    set reverse(value) {
+      super.reverse = value;
+    }
+    get transitionBuilder() {
+      return this[transitionBuilder$];
+    }
+    set transitionBuilder(value) {
+      super.transitionBuilder = value;
+    }
+    get layoutBuilder() {
+      return this[layoutBuilder$];
+    }
+    set layoutBuilder(value) {
+      super.layoutBuilder = value;
+    }
+    static defaultLayoutBuilder(entries) {
+      return new basic.Stack.new({children: entries, alignment: alignment.Alignment.center, $creationLocationd_0dea112b090073317d4: C[2] || CT.C2});
+    }
+    createState() {
+      return new page_transition_switcher._PageTransitionSwitcherState.new();
+    }
+  };
+  (page_transition_switcher.PageTransitionSwitcher.new = function(opts) {
+    let key = opts && 'key' in opts ? opts.key : null;
+    let duration = opts && 'duration' in opts ? opts.duration : C[0] || CT.C0;
+    let reverse = opts && 'reverse' in opts ? opts.reverse : false;
+    let transitionBuilder = opts && 'transitionBuilder' in opts ? opts.transitionBuilder : null;
+    let layoutBuilder = opts && 'layoutBuilder' in opts ? opts.layoutBuilder : C[1] || CT.C1;
+    let child = opts && 'child' in opts ? opts.child : null;
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[duration$] = duration;
+    this[reverse$] = reverse;
+    this[transitionBuilder$] = transitionBuilder;
+    this[layoutBuilder$] = layoutBuilder;
+    this[child$] = child;
+    page_transition_switcher.PageTransitionSwitcher.__proto__.new.call(this, {key: key, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = page_transition_switcher.PageTransitionSwitcher.prototype;
+  dart.addTypeTests(page_transition_switcher.PageTransitionSwitcher);
+  dart.addTypeCaches(page_transition_switcher.PageTransitionSwitcher);
+  dart.setMethodSignature(page_transition_switcher.PageTransitionSwitcher, () => ({
+    __proto__: dart.getMethods(page_transition_switcher.PageTransitionSwitcher.__proto__),
+    createState: dart.fnType(page_transition_switcher._PageTransitionSwitcherState, [])
+  }));
+  dart.setLibraryUri(page_transition_switcher.PageTransitionSwitcher, I[0]);
+  dart.setFieldSignature(page_transition_switcher.PageTransitionSwitcher, () => ({
+    __proto__: dart.getFields(page_transition_switcher.PageTransitionSwitcher.__proto__),
+    child: dart.finalFieldType(dart.nullable(framework.Widget)),
+    duration: dart.finalFieldType(core.Duration),
+    reverse: dart.finalFieldType(core.bool),
+    transitionBuilder: dart.finalFieldType(dart.fnType(framework.Widget, [framework.Widget, animation.Animation$(core.double), animation.Animation$(core.double)])),
+    layoutBuilder: dart.finalFieldType(dart.fnType(framework.Widget, [core.List$(framework.Widget)]))
+  }));
+  var _activeEntries = dart.privateName(page_transition_switcher, "_activeEntries");
+  var _currentEntry = dart.privateName(page_transition_switcher, "_currentEntry");
+  var _childNumber = dart.privateName(page_transition_switcher, "_childNumber");
+  var _addEntryForNewChild = dart.privateName(page_transition_switcher, "_addEntryForNewChild");
+  var _updateTransitionForEntry = dart.privateName(page_transition_switcher, "_updateTransitionForEntry");
+  var _newEntry = dart.privateName(page_transition_switcher, "_newEntry");
+  const State_TickerProviderStateMixin$36 = class State_TickerProviderStateMixin extends framework.State$(page_transition_switcher.PageTransitionSwitcher) {};
+  (State_TickerProviderStateMixin$36.new = function() {
+    ticker_provider.TickerProviderStateMixin$(page_transition_switcher.PageTransitionSwitcher)[dart.mixinNew].call(this);
+    State_TickerProviderStateMixin$36.__proto__.new.call(this);
+  }).prototype = State_TickerProviderStateMixin$36.prototype;
+  dart.applyMixin(State_TickerProviderStateMixin$36, ticker_provider.TickerProviderStateMixin$(page_transition_switcher.PageTransitionSwitcher));
+  page_transition_switcher._PageTransitionSwitcherState = class _PageTransitionSwitcherState extends State_TickerProviderStateMixin$36 {
+    initState() {
+      super.initState();
+      this[_addEntryForNewChild]({shouldAnimate: false});
+    }
+    didUpdateWidget(oldWidget) {
+      page_transition_switcher.PageTransitionSwitcher.as(oldWidget);
+      super.didUpdateWidget(oldWidget);
+      if (!this.widget.transitionBuilder[$_equals](oldWidget.transitionBuilder)) {
+        this[_activeEntries][$forEach](dart.bind(this, _updateTransitionForEntry));
+      }
+      let hasNewChild = this.widget.child != null;
+      let hasOldChild = this[_currentEntry] != null;
+      if (hasNewChild !== hasOldChild || hasNewChild && !framework.Widget.canUpdate(dart.nullCheck(this.widget.child), dart.nullCheck(this[_currentEntry]).widgetChild)) {
+        this[_childNumber] = this[_childNumber] + 1;
+        this[_addEntryForNewChild]({shouldAnimate: true});
+      } else if (this[_currentEntry] != null) {
+        if (!(hasOldChild && hasNewChild)) dart.assertFailed(null, I[1], 309, 14, "hasOldChild && hasNewChild");
+        if (!framework.Widget.canUpdate(dart.nullCheck(this.widget.child), dart.nullCheck(this[_currentEntry]).widgetChild)) dart.assertFailed(null, I[1], 310, 14, "Widget.canUpdate(widget.child!, _currentEntry!.widgetChild)");
+        dart.nullCheck(this[_currentEntry]).widgetChild = dart.nullCheck(this.widget.child);
+        this[_updateTransitionForEntry](dart.nullCheck(this[_currentEntry]));
+      }
+    }
+    [_addEntryForNewChild](opts) {
+      let shouldAnimate = opts && 'shouldAnimate' in opts ? opts.shouldAnimate : null;
+      if (!(shouldAnimate || this[_currentEntry] == null)) dart.assertFailed(null, I[1], 321, 12, "shouldAnimate || _currentEntry == null");
+      if (this[_currentEntry] != null) {
+        if (!shouldAnimate) dart.assertFailed(null, I[1], 323, 14, "shouldAnimate");
+        if (this.widget.reverse) {
+          dart.nullCheck(this[_currentEntry]).primaryController.reverse();
+        } else {
+          dart.nullCheck(this[_currentEntry]).secondaryController.forward();
+        }
+        this[_currentEntry] = null;
+      }
+      if (this.widget.child == null) {
+        return;
+      }
+      let primaryController = new animation_controller.AnimationController.new({duration: this.widget.duration, vsync: this});
+      let secondaryController = new animation_controller.AnimationController.new({duration: this.widget.duration, vsync: this});
+      if (shouldAnimate) {
+        if (this.widget.reverse) {
+          primaryController.value = 1.0;
+          secondaryController.value = 1.0;
+          secondaryController.reverse();
+        } else {
+          primaryController.forward();
+        }
+      } else {
+        if (!this[_activeEntries][$isEmpty]) dart.assertFailed(null, I[1], 351, 14, "_activeEntries.isEmpty");
+        primaryController.value = 1.0;
+      }
+      this[_currentEntry] = this[_newEntry]({child: dart.nullCheck(this.widget.child), primaryController: primaryController, secondaryController: secondaryController, builder: this.widget.transitionBuilder});
+      if (this.widget.reverse && this[_activeEntries][$isNotEmpty]) {
+        this[_activeEntries][$insert](this[_activeEntries][$length] - 1, dart.nullCheck(this[_currentEntry]));
+      } else {
+        this[_activeEntries][$add](dart.nullCheck(this[_currentEntry]));
+      }
+    }
+    [_newEntry](opts) {
+      let child = opts && 'child' in opts ? opts.child : null;
+      let builder = opts && 'builder' in opts ? opts.builder : null;
+      let primaryController = opts && 'primaryController' in opts ? opts.primaryController : null;
+      let secondaryController = opts && 'secondaryController' in opts ? opts.secondaryController : null;
+      let transition = builder(child, primaryController, secondaryController);
+      let entry = new page_transition_switcher._ChildEntry.new({widgetChild: child, transition: basic.KeyedSubtree.wrap(transition, this[_childNumber], {$creationLocationd_0dea112b090073317d4: C[6] || CT.C6}), primaryController: primaryController, secondaryController: secondaryController});
+      secondaryController.addStatusListener(dart.fn(status => {
+        if (status === animation.AnimationStatus.completed) {
+          if (!this.mounted) dart.assertFailed(null, I[1], 391, 16, "mounted");
+          if (!this[_activeEntries][$contains](entry)) dart.assertFailed(null, I[1], 392, 16, "_activeEntries.contains(entry)");
+          this.setState(dart.fn(() => {
+            this[_activeEntries][$remove](entry);
+            entry.dispose();
+          }, T.VoidTovoid()));
+        }
+      }, T.AnimationStatusTovoid()));
+      primaryController.addStatusListener(dart.fn(status => {
+        if (status === animation.AnimationStatus.dismissed) {
+          if (!this.mounted) dart.assertFailed(null, I[1], 401, 16, "mounted");
+          if (!this[_activeEntries][$contains](entry)) dart.assertFailed(null, I[1], 402, 16, "_activeEntries.contains(entry)");
+          this.setState(dart.fn(() => {
+            this[_activeEntries][$remove](entry);
+            entry.dispose();
+          }, T.VoidTovoid()));
+        }
+      }, T.AnimationStatusTovoid()));
+      return entry;
+    }
+    [_updateTransitionForEntry](entry) {
+      let t3, t2, t1, t0;
+      let transition = (t0 = this.widget, t1 = entry.widgetChild, t2 = entry.primaryController, t3 = entry.secondaryController, t0.transitionBuilder(t1, t2, t3));
+      entry.transition = new basic.KeyedSubtree.new({key: entry.transition.key, child: transition, $creationLocationd_0dea112b090073317d4: C[10] || CT.C10});
+    }
+    dispose() {
+      for (let entry of this[_activeEntries]) {
+        entry.dispose();
+      }
+      super.dispose();
+    }
+    build(context) {
+      let t1, t0;
+      t0 = this.widget;
+      t1 = this[_activeEntries][$map](framework.Widget, dart.fn(entry => entry.transition, T._ChildEntryToWidget()))[$toList]();
+      return t0.layoutBuilder(t1);
+    }
+  };
+  (page_transition_switcher._PageTransitionSwitcherState.new = function() {
+    this[_activeEntries] = T.JSArrayOf_ChildEntry().of([]);
+    this[_currentEntry] = null;
+    this[_childNumber] = 0;
+    page_transition_switcher._PageTransitionSwitcherState.__proto__.new.call(this);
+    ;
+  }).prototype = page_transition_switcher._PageTransitionSwitcherState.prototype;
+  dart.addTypeTests(page_transition_switcher._PageTransitionSwitcherState);
+  dart.addTypeCaches(page_transition_switcher._PageTransitionSwitcherState);
+  dart.setMethodSignature(page_transition_switcher._PageTransitionSwitcherState, () => ({
+    __proto__: dart.getMethods(page_transition_switcher._PageTransitionSwitcherState.__proto__),
+    [_addEntryForNewChild]: dart.fnType(dart.void, [], {}, {shouldAnimate: core.bool}),
+    [_newEntry]: dart.fnType(page_transition_switcher._ChildEntry, [], {}, {builder: dart.fnType(framework.Widget, [framework.Widget, animation.Animation$(core.double), animation.Animation$(core.double)]), child: framework.Widget, primaryController: animation_controller.AnimationController, secondaryController: animation_controller.AnimationController}),
+    [_updateTransitionForEntry]: dart.fnType(dart.void, [page_transition_switcher._ChildEntry]),
+    build: dart.fnType(framework.Widget, [framework.BuildContext])
+  }));
+  dart.setLibraryUri(page_transition_switcher._PageTransitionSwitcherState, I[0]);
+  dart.setFieldSignature(page_transition_switcher._PageTransitionSwitcherState, () => ({
+    __proto__: dart.getFields(page_transition_switcher._PageTransitionSwitcherState.__proto__),
+    [_activeEntries]: dart.finalFieldType(core.List$(page_transition_switcher._ChildEntry)),
+    [_currentEntry]: dart.fieldType(dart.nullable(page_transition_switcher._ChildEntry)),
+    [_childNumber]: dart.fieldType(core.int)
+  }));
+  dart.trackLibraries("packages/animations/src/page_transition_switcher.dart", {
+    "package:animations/src/page_transition_switcher.dart": page_transition_switcher
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["page_transition_switcher.dart"],"names":[],"mappings":"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","file":"../../../../../../../../../packages/animations/src/page_transition_switcher.dart.lib.js"}');
+  // Exports:
+  return {
+    src__page_transition_switcher: page_transition_switcher
+  };
+}));
+
+//# sourceMappingURL=page_transition_switcher.dart.lib.js.map
