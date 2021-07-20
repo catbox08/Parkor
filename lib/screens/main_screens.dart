@@ -14,7 +14,7 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-  int pageIndex = 1;
+  int pageIndex = 0;
   List<Widget> pageList = <Widget>[
     WelcomeScreen(),
     ProfilePage(),

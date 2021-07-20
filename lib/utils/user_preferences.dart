@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // import 'package:parkor/models/us.dart';
 
 // class UserPreferences {
@@ -11,7 +10,6 @@
 //     isDarkMode: false,
 //   );
 // }
-=======
 import 'dart:convert';
 import 'package:parkor/models/us.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -40,8 +38,7 @@ class UserPreferences {
 
   static User getUser() {
     final json = _preferences.getString(_keyUser);
-    
+
     return json == null ? myUser : User.fromJson(jsonDecode(json));
   }
 }
->>>>>>> deveik
