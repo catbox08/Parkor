@@ -1,6 +1,8 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:parkor/screens/BlogComponent/AddBlog.dart';
 import 'package:parkor/screens/BlogComponent/BlogCard.dart';
 import 'package:parkor/screens/BlogComponent/Blogs.dart';
 import 'package:parkor/screens/home.dart';
@@ -35,13 +37,14 @@ class WelcomeScreen extends StatelessWidget {
           ),
         ],
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            BlogCard(),
-          ],
-        ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){
+          Navigator.push(context, MaterialPageRoute(builder: (context) => addBlog()));
+        },
+        child: const Icon(Icons.add),
+        backgroundColor: Colors.green,
       ),
+      body: BlogCard(),
     );
   }
 }

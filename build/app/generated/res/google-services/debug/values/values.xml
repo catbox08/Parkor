@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">38665760501-nm4jgmo3iph90s41frcukoaoikrremk6.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">38665760501</string>
+    <string name="google_api_key" translatable="false">AIzaSyDGqMP4BUyAjwcMFXY6WfotvaZgesDL29w</string>
+    <string name="google_app_id" translatable="false">1:38665760501:android:7c744f3f4208a47d1b9fbc</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDGqMP4BUyAjwcMFXY6WfotvaZgesDL29w</string>
+    <string name="google_storage_bucket" translatable="false">parkor-f6754.appspot.com</string>
+    <string name="project_id" translatable="false">parkor-f6754</string>
+</resources>
